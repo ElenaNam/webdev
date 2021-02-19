@@ -1,4 +1,5 @@
 @import './variables.scss';
+
 @mixin yourLife {
     color: $font-light;
     font-family: 'Roboto';
@@ -68,4 +69,48 @@
     text-align: center;
     background-color: $font-button;  
     color: $font-light;
+}
+@mixin wrapper-block_2-4 {
+    margin: 0 auto;
+    padding: 120px 0;
+    max-width: 1600px;    
+    width: 100%;
+    height: 842px;
+    background: $font-light;
+}
+@mixin content-block_2-4 {
+    max-width: 1062px;
+    margin: 0 auto;      
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+@mixin text-block_2-4 {    
+    display: flex;
+    flex-direction: column;
+    max-width: 407px;
+    width: 100%;
+}
+@mixin text-block-h2_2-4 {    
+    @include h2-24-bold();
+    max-width: 367px;
+    width: 100%;
+    margin-bottom: 12px; 
+}
+@mixin text-block-span_2-4 {  
+    @include body-14-reg();
+    margin: 10px auto;
+}
+@mixin text-block-button_2-4 {  
+    margin: 19px 0;
+    max-width: 184px;
+    width: 100%;
+    display: flex;
+}
+
+
+@mixin img-block_2-4 {
+    display: flex;
+    max-width: 407px;
+    width: 100%;
 }
