@@ -1,0 +1,31 @@
+@mixin yourLife {
+    color: #FFFFFF;
+    font-family: 'Roboto';
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 75px;
+    letter-spacing: 4.5px;
+    text-align: center;
+}
+@mixin yourLife_subtitle {
+    color: #FFFFFF;
+    font-family: 'Roboto';
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 25px;
+    letter-spacing: 0px;
+    text-align: center;    
+}
+@mixin body-14-reg {
+    color: #FFFFFF;    
+    font-family: Roboto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0px;
+    text-align: left;
+  
+}
