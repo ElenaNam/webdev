@@ -5,6 +5,7 @@
   margin: 0;
 }
 
+/*-----------------YOUR LIFE--------------------*/
 .wrapper {
   margin: 0 auto;
   max-width: 1600px;
@@ -51,7 +52,7 @@
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
-  line-height: 19, 6px;
+  line-height: 20px;
   letter-spacing: 0px;
   text-align: left;
 }
@@ -161,6 +162,65 @@
 
 .telegram {
   background: url("../assets/img/telegram_fff.svg");
+}
+
+/*-----------------RAPPRESENT--------------------*/
+.rappresent-wrapper {
+  margin: 0 auto;
+  max-width: 1600px;
+  width: 100%;
+  height: 842px;
+  background: #FFFFFF;
+}
+
+.rappresent-content {
+  margin: 120px auto 0;
+  max-width: 1062px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.rappresent-text {
+  margin-top: 175px;
+  display: flex;
+  flex-direction: column;
+  max-width: 407px;
+  width: 100%;
+}
+.rappresent-text h2 {
+  font-family: "Roboto";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 28px;
+  letter-spacing: 1px;
+  text-align: left;
+  max-width: 367px;
+  width: 100%;
+  margin-bottom: 12px;
+}
+.rappresent-text span {
+  font-family: "Roboto";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0px;
+  text-align: left;
+  margin: 10px auto;
+}
+.rappresent-text button {
+  margin: 19px 0;
+  max-width: 184px;
+  width: 100%;
+  display: flex;
+}
+
+.rappresent-img {
+  display: flex;
+  max-width: 407px;
+  width: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */
