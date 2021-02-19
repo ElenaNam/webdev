@@ -133,13 +133,14 @@
 
 .rappresent-wrapper {
     margin: 0 auto;
+    padding: 120px 0;
     max-width: 1600px;    
     width: 100%;
     height: 842px;
     background: $font-light;
 }
-.rappresent-content {
-    margin: 120px auto 0;
+.rappresent-content {   
+    margin: 0 auto;
     max-width: 1062px;    
     width: 100%;
     display: flex;
@@ -160,7 +161,6 @@
     & span {
         @include body-14-reg ();
         margin: 10px auto;
-
     }
     & button {
         margin: 19px 0;
@@ -169,11 +169,81 @@
         display: flex;
     }
 }
-
-
-
 .rappresent-img {
     display: flex;
     max-width: 407px;
     width: 100%;
+}
+/*-----------------OUR COMMUNITY--------------------*/
+.community-wrapper {
+    margin: 0 auto;
+    max-width: 1600px;    
+    width: 100%;
+    height: 504px;
+    background: $font-bg-1;
+    
+}
+.community-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;  
+   
+     
+}
+.slider-controls {
+    margin: 80px auto 0;
+    max-width: 1062px;   
+    width: 100%;
+    justify-content: flex-end;
+    display: flex;
+    & img {
+        width: 8px;        
+    }
+    & p {
+        margin: 0 12px;
+        font-family: "Roboto";
+        font-size: 18px;
+        line-height: 20px;
+        letter-spacing: .5px;
+    }
+}
+.community-block {
+    margin-top: 35px;
+    margin-left: 269px;
+    max-width: 298px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;    
+    align-items: center;
+    & img {
+        max-width: 45px;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    & h3 {
+        @include h3-16-upper-bold();
+    }
+    & span {        
+        margin-top: 12px;
+        text-align: center;
+        @include body-14-reg ();        
+    }
+
+}
+.community-slider {
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    
+
+}
+
+.slides {
+    max-width: 909px;
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+    & img {
+        margin: 0 15px;
+    }
 }

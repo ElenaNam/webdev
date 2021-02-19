@@ -29,15 +29,23 @@
     text-align: left;
 
 }
-@mixin body-14-reg {
-       
+@mixin body-14-reg {       
     font-family: 'Roboto';
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
     line-height: 20px;
-    letter-spacing: 0px;
-    text-align: left;  
+    letter-spacing: 0px;    
+}
+@mixin h3-16-upper-bold {   
+    font-family: 'Roboto';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 2.4px;
+    text-align: center;
+
 }
 @mixin link-active {
     cursor: pointer;
