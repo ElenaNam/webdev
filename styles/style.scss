@@ -250,3 +250,53 @@
 .implement-img {
     @include img-block_2-4();
 }
+
+/*-----------------SIGN-UP--------------------*/
+
+.signup-wrapper {
+    margin: 0 auto;
+    max-width: 1600px;    
+    width: 100%;
+    height: 598px;
+    background: url('../assets/img/bg_5.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+.signup-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    & h2 {
+        margin: 217px auto 15px;
+        color: $font-light; 
+        @include h2-24-bold();
+    }
+    & form {
+        margin: 15px auto;
+        display: flex;
+        max-width: 406px;
+        width: 100%;
+        font-size: 0;
+    }
+    .input {
+        margin: 0;
+        padding: 15px 0 12px 22px;
+        display: inline-flex;
+        max-width: 340px;
+        width: 100%;
+        color: $font-dark;
+        height: 46px;
+        border: none;
+        outline: none;
+        @include body-14-reg(); 
+    }
+    .input-button {
+        display: inline-flex;
+        margin: 0;
+        max-width: 66px;
+        width: 100%;
+    }
+}
