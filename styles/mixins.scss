@@ -55,7 +55,7 @@
     opacity: 1;    
 }
 @mixin button {
-    height: 46px;
+    /* height: 46px; */
     justify-content: center;
     align-items: center;  
     outline: none;
@@ -66,8 +66,7 @@
     font-weight: 700;
     line-height: 16px;
     letter-spacing: 0px;
-    text-align: center;
-    background-color: $font-button;  
+    text-align: center;    
     color: $font-light;
 }
 @mixin wrapper-block_2-4 {
