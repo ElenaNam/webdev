@@ -15,18 +15,27 @@
     width: 100%;
     height: 744px;
     background: url('../assets/img/bg.jpg');
+    background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
 }
 .header {
-    & nav {
-        margin: 0 516px 0 502px;
+    margin: 0 auto;
+    & nav {        
+        margin: 0 auto;
         padding: 25px 0;
         max-width: 582px;
         width: 100%;
         display: flex;
         justify-content: space-between;
-        align-items: center;        
+        align-items: center;  
+   
+        @include for-size(phoneLand){           
+            padding: 10px;
+        }      
+        @include for-size(phonePort){
+            padding: 10px;
+        }      
     }
     & a {
         display: inline-flex;
@@ -46,6 +55,9 @@
         opacity: .5;
         transition: .5s;        
     }
+    @include for-size(phonePort){
+        margin: 0;
+    }  
 }
 .item-link {
     border: 1px solid transparent;
@@ -63,15 +75,32 @@
 }
 
 .your-life-content {
-    padding: 134px 0 94px;    
+    padding: 136px 10px 94px;    
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    & p {
+
+    @include for-size(phonePort){
+        padding-top: 110px;
+    }    
+
+
+    & h1 {
         @include yourLife();
-        margin-bottom: 12px;
-        
+        margin-bottom: 12px;  
+
+        @include for-size(tablet){
+            font-size: 48px;
+        }     
+        @include for-size(phoneLand){            
+            font-size: 32px;
+        }      
+        @include for-size(phonePort){
+            margin-bottom: 20px;            
+            font-size: 30px;
+            line-height: 40px;
+        }    
     }
     & span {
         @include yourLife_subtitle();
@@ -84,8 +113,7 @@
         max-width: 184px;
         width: 100%;
         display: flex;
-    }
-    
+    }    
 }
 .button {
     height: 46px;
@@ -96,7 +124,6 @@
     &:hover {
         cursor: pointer;
         background-color: $font-button-dark; 
-
     }
 }
 
@@ -135,15 +162,47 @@
 
 .rappresent-wrapper {
     @include wrapper-block_2-4();
+
+    @include for-size(laptop){
+        height: auto;
+        padding-bottom: 100px;
+    } 
+    @include for-size(tablet){
+        height: auto;
+    }  
+    @include for-size(phoneLand){
+        padding: 50px 0;
+    }  
 }
 .rappresent-content {        
     @include content-block_2-4();
+
+    @include for-size(laptop){
+        padding: 0 40px;
+        align-items: center;
+    }    
+    @include for-size(tablet){
+        padding: 0 40px;        
+        align-items: center;
+    }    
+    @include for-size(phoneLand){        
+        flex-wrap: wrap;
+        justify-content: center;
+    }    
+    @include for-size(phonePort){        
+        width: 95%;
+        flex-wrap: wrap;
+        justify-content: center;
+    }    
 }
 .rappresent-text {
     margin-top: 175px;
     @include text-block_2-4();
     & h2 {
         @include text-block-h2_2-4(); 
+        @include for-size(tablet){
+            font-size: 20px;
+        } 
     }
     & span {         
         @include text-block-span_2-4();      
@@ -151,9 +210,47 @@
     & button {
         @include text-block-button_2-4();
     }
+    @include for-size(laptop){
+        margin: 0;
+    } 
+    @include for-size(tablet){
+        margin: 0;
+    } 
+    @include for-size(phoneLand){
+        margin: 0;
+    } 
+    @include for-size(phonePort){
+        margin: 0;
+    } 
 }
 .rappresent-img {
     @include img-block_2-4();
+
+    & img {
+        object-fit: cover;
+        @include for-size(laptop){
+            margin-left: auto;
+            width: 85%;
+            object-fit: contain;
+        }
+        @include for-size(tablet){
+            margin-left: auto;
+            width: 80%;
+            object-fit: contain;
+        }
+        @include for-size(phoneLand){ 
+            margin: 0 auto;           
+            width: 80%; 
+            height: initial;           
+            object-fit: contain;
+        }
+        @include for-size(phonePort){ 
+            margin: 0 auto;           
+            width: 90%;    
+            height: 90%;        
+            object-fit: contain;
+        }
+    }
 }
 
 /*-----------------OUR COMMUNITY--------------------*/
@@ -162,12 +259,39 @@
     max-width: 1600px;    
     width: 100%;
     height: 504px;
-    background: $font-bg-1;    
+    background: $font-bg-1; 
+
+    @include for-size(tablet){
+        height: auto;
+    }     
+    @include for-size(phoneLand){
+        height: auto;
+    }     
+    @include for-size(phonePort){
+        height: auto;
+    }   
 }
 .community-content {
     width: 100%;
     display: flex;
-    flex-direction: column;       
+    flex-direction: column; 
+
+    @include for-size(laptop){
+        padding-left: 10px;
+    }     
+    @include for-size(tablet){
+        padding-left: 10px;
+        padding-bottom: 10px;
+        align-items: center;
+    }     
+    @include for-size(phoneLand){
+        padding-left: 10px;
+        padding-bottom: 20px;
+    }     
+    @include for-size(phonePort){
+        padding-left: 10px;
+        padding-bottom: 10px;
+    }     
 }
 .slider-controls {
     margin: 80px auto 0;
@@ -189,6 +313,42 @@
         line-height: 20px;
         letter-spacing: .5px;
     }
+    @include for-size(laptop){
+        width: 95%;
+    }   
+    @include for-size(tablet){
+        width: 95%;
+    }   
+    @include for-size(phoneLand){
+        width: 95%;
+    }   
+    @include for-size(phonePort){
+        width: 95%;
+    }   
+}
+.community-slider {
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+
+    @include for-size(tablet){        
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }  
+    @include for-size(phoneLand){        
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }  
+    @include for-size(phonePort){        
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }  
 }
 .community-block {
     margin-top: 35px;
@@ -211,12 +371,22 @@
         text-align: center;
         @include body-14-reg ();        
     }
+    @include for-size(laptop){
+        margin-left: 0;
+    }    
+    @include for-size(tablet){
+        margin-left: 0;
+    }    
+    
+    @include for-size(phoneLand){
+        margin-left: 0;
+    }    
+    
+    @include for-size(phonePort){
+        margin-left: 0;
+    }     
 }
-.community-slider {
-    padding-top: 20px;
-    display: flex;
-    justify-content: space-between;
-}
+
 .slides {
     max-width: 909px;
     width: 100%;
@@ -224,6 +394,22 @@
     overflow: hidden;
     & img {
         margin: 0 15px;
+        object-fit: cover;
+        @include for-size(phonePort){
+            width: 90%;
+        }
+    }
+    @include for-size(laptop){
+        padding-left: 10px;
+    }
+    @include for-size(tablet){
+        padding-left: 19%;
+    }
+    @include for-size(phoneLand){
+        padding-left: 3%;
+    }
+    @include for-size(phonePort){
+        padding-left: 3%;
     }
 }
 
@@ -231,9 +417,38 @@
 
 .implement-wrapper {
     @include wrapper-block_2-4();
+
+    @include for-size(laptop){
+        padding-bottom: 100px;
+        height: auto;
+    } 
+    @include for-size(tablet){
+        height: auto;
+    }  
+    @include for-size(phoneLand){
+        padding: 50px 0;
+    } 
 }
 .implement-content {    
     @include content-block_2-4();
+
+    @include for-size(laptop){
+        padding: 0 40px;
+        align-items: center;
+    }    
+    @include for-size(tablet){
+        padding: 0 40px;        
+        align-items: center;
+    }    
+    @include for-size(phoneLand){        
+        flex-wrap: wrap;
+        justify-content: center;
+    }    
+    @include for-size(phonePort){        
+        width: 95%;
+        flex-wrap: wrap;
+        justify-content: center;
+    }  
 }
 .implement-text {
     margin-top: 199px;
@@ -241,6 +456,10 @@
     @include text-block_2-4();
     & h2 {
         @include text-block-h2_2-4(); 
+
+        @include for-size(tablet){
+            font-size: 20px;
+        }
     }
     & span {
         @include text-block-span_2-4();      
@@ -249,9 +468,48 @@
         background-color: $font-button;  
         @include text-block-button_2-4();
     }
+
+    @include for-size(laptop){
+        margin: 0;
+    } 
+    @include for-size(tablet){
+        margin: 0;
+    } 
+    @include for-size(phoneLand){
+        margin: 0;
+        padding-top: 50px;
+    } 
+    @include for-size(phonePort){
+        margin: 0;
+        padding-top: 50px;
+    } 
 }
 .implement-img {
     @include img-block_2-4();
+
+    & img {
+        object-fit: cover;
+        @include for-size(laptop){            
+            width: 85%;
+            object-fit: contain;
+        }
+        @include for-size(tablet){            
+            width: 80%;
+            object-fit: contain;
+        }
+        @include for-size(phoneLand){ 
+            margin: 0 auto;           
+            width: 80%; 
+            height: initial;           
+            object-fit: contain;
+        }
+        @include for-size(phonePort){ 
+            margin: 0 auto;           
+            width: 90%;    
+            height: 90%;        
+            object-fit: contain;
+        }
+    }
 }
 
 /*-----------------SIGN-UP--------------------*/
@@ -262,9 +520,9 @@
     width: 100%;
     height: 598px;
     background: url('../assets/img/bg_5.jpg');
+    background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
-
 }
 .signup-content {
     display: flex;
@@ -276,6 +534,9 @@
         margin: 217px auto 15px;
         color: $font-light; 
         @include h2-24-bold();
+        @include for-size(phonePort){
+            font-size: 18px;
+        }
     }
     & form {
         margin: 15px auto;
@@ -302,13 +563,15 @@
         max-width: 66px;
         width: 100%;        
     }
+    @include for-size(phonePort){
+        width: 95%;
+    }
 }
 
 /*-----------------DOWNLOAD--------------------*/
 
 .download-wrapper {
     margin: 0 auto;
-
 }
 .download-content {    
     padding: 120px 0 180px;
@@ -319,6 +582,18 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
+
+    @include for-size(tablet){
+        padding: 100px 10px;
+    }
+    @include for-size(phoneLand){
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    @include for-size(phonePort){
+        padding-left: 10px;
+        padding-right: 10px;
+    }
 
     & h2 {
         margin-bottom: 10px;
@@ -345,6 +620,10 @@
             background-color: $font-button;
             color: $font-light;
 
+            @include for-size(phonePort){
+                width: 135px;
+            }
+
             & span {               
                 max-width: 128px;
                 width: 100%;
@@ -355,7 +634,10 @@
                 font-style: normal;
                 font-weight: 700;
                 line-height: 53px;
-                letter-spacing: 0px;               
+                letter-spacing: 0px;    
+                @include for-size(phonePort){
+                    font-size: 12px;
+                }           
             }
 
             & button {
@@ -375,7 +657,13 @@
                 
                 & img {
                     width: 30%;
+                    @include for-size(phonePort){
+                        width: 45%;
+                    }  
                 }
+                @include for-size(phonePort){
+                    width: 55px;
+                }   
             }
         }    
     }
@@ -387,8 +675,6 @@
     max-width: 1600px;    
     width: 100%;
     background-color: $font-bg-2;
-
-
 }
 .footer-content {
     padding: 60px 0 80px;
@@ -397,8 +683,7 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    
+    align-items: center;   
 
     & nav {
         display: flex; 
@@ -410,6 +695,12 @@
         }
         & span {
             color: $font-light; 
+            @include for-size(phonePort){
+                display: none;
+            }
+        }
+        @include for-size(phonePort){
+            flex-direction: column;
         }
     }
     & div {
@@ -419,7 +710,17 @@
     & address {
         @include body-14-reg();
         color: $font-text-1;
-
     }
-
+    @include for-size(laptop){
+        padding: 60px 10px;
+    }
+    @include for-size(tablet){
+        padding: 60px 10px;
+    }
+    @include for-size(phoneLand){
+        padding: 40px 10px;
+    }
+    @include for-size(phonePort){
+        padding: 40px 10px;
+    }
 }
