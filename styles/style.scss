@@ -393,16 +393,33 @@
 .footer-content {
     padding: 60px 0 80px;
     margin: 0 auto; 
-    max-width: 1062px;         
+    max-width: 1280px;         
     width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
 
     & nav {
+        display: flex; 
+        justify-content: space-between;
+        max-width: 236px;
+        width: 100%;
         & a {
             text-decoration: none;
         }
         & span {
-            color: $font-light;
+            color: $font-light; 
         }
+    }
+    & div {
+        display: flex;
+        padding-right: 68px;
+    }
+    & address {
+        @include body-14-reg();
+        color: $font-text-1;
+
     }
 
 }
